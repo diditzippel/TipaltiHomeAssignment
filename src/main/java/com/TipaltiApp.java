@@ -7,14 +7,15 @@ public class TipaltiApp {
         Person personB = new Person(new Name("Alan", "Turing"),new Address("street2", "city2"));
         Person personC = new Person(new Name("Joan", "Clarke"),new Address("street2", "city2"));
         Person personD = new Person(new Name("Joan", "Clarke"),new Address("street3", "city3"));
+        Person personE = new Person(new Name("Alan", "Turing"),new Address("street3", "city3"));
 
-        Person[] persons = new Person[]{personA,personB,personC,personD};
+        Person[] persons = new Person[]{personA, personB, personC, personD,personE};
 
         RelationUtility relationUtility = new RelationUtility();
 
         relationUtility.init(persons);
-        int relationNumber = relationUtility.findMinRelationLevel(personA, personB);
+        int relationNumber = relationUtility.findMinRelationLevel(personA, personD);
 
-        System.out.println("Number of relations is ---> "+ relationNumber);
+        System.out.println("Relations number: "+ relationNumber);
     }
 }
